@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+{% block main %}
+    <div class="question_box">
+        <form action="/ask" method="post">
+            <label for="">Type question NGA</label>
+            <input type="text" class="question" name="question">
+            <button type="submit">SUBMIT QUESTION GAY NIH</button>
+        </form>
+    </div>
+    <div class="response_box">
+        
+        <ul>
+         
+            <li>date posted: {{date_posted}}</li>
+            <!-- <li style="white-space: pre-wrap;">response: {{response}}</li> -->
+        </ul>
+    </div>
+    <div class="plot-container">
+        <div class="chart-box">
+            {{ diverging_chart | safe }}
+        </div>
+    </div>
+{% endblock %}
